@@ -2,18 +2,20 @@
 
 using System;
 
-class Program
+class MainClass
 {
     public static void Main(string[] args)
     {
-        string myName;
-        myName = "Nikita";
+        string myName = "Niktia";
+        byte Age = 27;
+        bool HaveIApet = true;
+        double MyShoeSize = 42.5;
 
-        Console.WriteLine(myName);
-        Console.WriteLine("\t \t Привет, Мир");
-        Console.WriteLine("\t \t Мне 35 лет");
-        Console.WriteLine("\t \t My name is \n {0}", myName);
-        Console.WriteLine("\u0023");
+
+        Console.WriteLine("My name is " + myName);
+        Console.WriteLine("My age is " + Age);
+        Console.WriteLine("Do I have a pet " + HaveIApet);
+        Console.WriteLine("My shoe size " + MyShoeSize);
 
         Console.ReadKey();
 
