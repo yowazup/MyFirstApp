@@ -2,33 +2,38 @@
 
 using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Drawing;
 
 class MainClass
 {
     public static void Main(string[] args)
-    {
-        //Ввод имени
-        Console.Write("\n Enter your name: ");
-        var name = Console.ReadLine();
+    { 
+    Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+		
+	var color = Console.ReadLine();
 
-        //Ввод даты рождения и преодбразование в формат даты
-        Console.Write("\n Enter your birthdate: ");
-        string inputdate = Console.ReadLine();
-        int year = int.Parse(inputdate.Substring(6,4));
-        int month = int.Parse(inputdate.Substring(3, 2));
-        int day = int.Parse(inputdate.Substring(0, 2));
-        var birthdate = new DateTime (year, month, day);
+		if (color == "red")
+		{
+		Console.BackgroundColor = ConsoleColor.Red;
+		Console.ForegroundColor = ConsoleColor.Black;
 
-        //Расчет возраста
-        DateTime today = DateTime.Today;        
-        TimeSpan diff = today - birthdate;
-        double longage = diff.TotalDays / 365.25;
-        int age = (int) longage;
+		Console.WriteLine("Your color is red!");
+		}
+
+        else if (color == "green")
+        {
+        Console.BackgroundColor = ConsoleColor.Green;
+        Console.ForegroundColor = ConsoleColor.Black;
+
+        Console.WriteLine("Your color is green!");
+        }
         
-        //Вывод ответа
-        Console.WriteLine("\n Hello, {0}. Today is {1} and your age is {2} years.", name, today.ToString("dd MMMM yyyy"), age);
+        else
+        {
+        Console.BackgroundColor = ConsoleColor.Cyan;
+        Console.ForegroundColor = ConsoleColor.Black;
 
-        Console.ReadKey();
-
+        Console.WriteLine("Your color is cyan!");
+        }
     }
 }
